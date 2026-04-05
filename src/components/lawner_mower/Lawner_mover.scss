@@ -1,0 +1,11 @@
+.lawnermover {
+  position: absolute;
+  height: 70px;
+  background-size: contain; 
+  background-repeat: no-repeat;
+  transition: transform 0.1s linear;
+
+  &--moving {
+    transform: translateY(25px);
+  }
+}

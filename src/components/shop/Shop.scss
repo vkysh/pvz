@@ -1,0 +1,55 @@
+.shop{
+  background-color: rgb(107, 66, 19); 
+  color: black;
+  display: flex;
+
+  &__plants {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  &__plant {
+    background-color: rgb(206, 174, 106);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    &-img {
+      width: 80px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sun {
+    background-color: rgb(255, 223, 0);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+
+  }
+  &__sun-value {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+}
