@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import lawnerImg from getImgPath('/img/lawner_mover.png');
-import './lawner_movet.scss';
+import './lawner_mover.scss';
 
 const getImgPath = (path) => {
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
@@ -59,7 +58,7 @@ export default function LawnerMovet({ rowId, zombies, onKillZombie, onRemove }) 
       style={{ 
         left: positionX + 'px',
         width: moverWidth + 'px',
-        backgroundImage: `url(${lawnerImg})`,
+        backgroundImage: `url(${getImgPath('/img/lawnmower.png')})`,
       }}
     ></div>
   );

@@ -1,0 +1,11 @@
+.zombie {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: left 0.5s linear;
+  z-index: 10;
+}
+
