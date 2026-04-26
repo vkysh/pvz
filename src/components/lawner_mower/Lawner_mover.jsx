@@ -1,13 +1,13 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import './lawner_mover.scss';
+import './Lawner_mover.scss';
 
 const getImgPath = (path) => {
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   return import.meta.env.BASE_URL + cleanPath;
 };
 
-export default function LawnerMovet({ rowId, zombies, onKillZombie, onRemove }) {
+export default function LawnerMover({ rowId, zombies, onKillZombie, onRemove }) {
 
   const [positionX, setPositionX] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
@@ -25,7 +25,7 @@ export default function LawnerMovet({ rowId, zombies, onKillZombie, onRemove }) 
 
   useEffect(() => {
     const GameLoop = setInterval(() => {
-      const zombieInRow = zombies.find(z => z.row === rowId);
+      const zombieInRow = zombies.filter(z => z.row === rowId);
       zombieInRow.forEach(zombie => {
         const hitZone = posRef.current + moverWidth;
         if (zombie.positionX <= hitZone && zombie.positionX >= posRef.current) {

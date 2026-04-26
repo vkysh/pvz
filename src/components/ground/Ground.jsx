@@ -26,7 +26,7 @@ export function Ground() {
         hp: 100, // general hp for all zombies, can be adjusted based on type
       };
       setZombies((prevZombies) => [...prevZombies, newZombie]);
-    }, 4000);
+    }, 7000);
     return () => clearInterval(spawnTimer);
     
   }, []);
@@ -39,7 +39,7 @@ export function Ground() {
           positionX: zombie.positionX - 2, 
         }))
       );
-    }, 50);
+    }, 100);
     return () => clearInterval(moveTimer);
   }, []);
 
@@ -64,7 +64,7 @@ export function Ground() {
         })
       }
       {zombies.map((zombie) => (
-        <Zombie key={zombie.id} positionX={zombie.positionX} rowId={zombie.rowId} type={zombie.type} hp={zombie.hp} onKill={() => handleKillZombie(zombie.id)} />
+        <Zombie key={zombie.id} zombieData={zombie}/>
       ))}
       <img src={getImgPath('/img/pvzhouse.png')} alt="" className='ground__house' />
     </div>

@@ -4,8 +4,9 @@
   background-size: contain; 
   background-repeat: no-repeat;
   transition: transform 0.1s linear;
+  z-index: 10;
 
   &--moving {
-    transform: translateY(25px);
+    transform: translateY(10px);
   }
 }

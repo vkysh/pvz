@@ -21,7 +21,7 @@ export default function Zombie({ zombieData }) {
       className="zombie"
       style={{ 
         left: `${positionX}px`, 
-        top: `${rowId * 100}px`,
+        top: `${rowId * 136.6 + 190}px`,
         backgroundImage: `url(${imgPath})` 
       }}
     ></div> 
